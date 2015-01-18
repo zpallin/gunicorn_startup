@@ -34,8 +34,8 @@ class Chef
         resource = new_resource.to_hash
         resource[:user] ||= new_resource.name
         resource[:group] ||= new_resource.name
-        resource[:django_settings_module] ||= "#{new_resource.name}_app.settings" 
-        resource[:django_wsgi_module] ||= "#{new_resource.name}_app.wsgi" 
+        resource[:django_settings_module] ||= "#{new_resource.name}.settings" 
+        resource[:django_wsgi_module] ||= "#{new_resource.name}.wsgi" 
         resource[:num_workers] ||= new_resource.num_workers
 
         notifying_block do
